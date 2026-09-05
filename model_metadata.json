@@ -1,0 +1,66 @@
+{
+    "winning_model": "XGBoost",
+    "numeric_features": [
+        "Age at Diagnosis",
+        "Tumor Size",
+        "Tumor Stage",
+        "Lymph nodes examined positive",
+        "Neoplasm Histologic Grade"
+    ],
+    "categorical_features": [
+        "Type of Breast Surgery",
+        "Chemotherapy",
+        "Radio Therapy",
+        "Hormone Therapy",
+        "ER Status",
+        "PR Status",
+        "HER2 Status",
+        "Inferred Menopausal State",
+        "Primary Tumor Laterality",
+        "Cellularity"
+    ],
+    "target_col": "Overall Survival Status",
+    "results": [
+        {
+            "Algorithm": "XGBoost",
+            "Accuracy": 0.7789,
+            "Precision": 0.6359,
+            "Recall": 0.7844,
+            "F1-Score": 0.7024,
+            "ROC-AUC": 0.8542,
+            "Best_CV_F1": 0.6228,
+            "Best_Params": "{'classifier__learning_rate': 0.05, 'classifier__max_depth': 5, 'classifier__n_estimators': 200, 'classifier__scale_pos_weight': 2, 'classifier__subsample': 1.0}"
+        },
+        {
+            "Algorithm": "Random Forest",
+            "Accuracy": 0.7709,
+            "Precision": 0.6193,
+            "Recall": 0.8084,
+            "F1-Score": 0.7013,
+            "ROC-AUC": 0.8505,
+            "Best_CV_F1": 0.6353,
+            "Best_Params": "{'classifier__class_weight': 'balanced', 'classifier__max_depth': 6, 'classifier__min_samples_leaf': 1, 'classifier__min_samples_split': 2, 'classifier__n_estimators': 200}"
+        },
+        {
+            "Algorithm": "AdaBoost",
+            "Accuracy": 0.751,
+            "Precision": 0.6567,
+            "Recall": 0.5269,
+            "F1-Score": 0.5847,
+            "ROC-AUC": 0.8031,
+            "Best_CV_F1": 0.5167,
+            "Best_Params": "{'classifier__learning_rate': 1.0, 'classifier__n_estimators': 100}"
+        },
+        {
+            "Algorithm": "Decision Tree",
+            "Accuracy": 0.7331,
+            "Precision": 0.6435,
+            "Recall": 0.4431,
+            "F1-Score": 0.5248,
+            "ROC-AUC": 0.7974,
+            "Best_CV_F1": 0.5614,
+            "Best_Params": "{'classifier__criterion': 'gini', 'classifier__max_depth': 5, 'classifier__min_samples_leaf': 2, 'classifier__min_samples_split': 2}"
+        }
+    ],
+    "developer": "Najeeb Ullah | Machine Learning Engineer"
+}
